@@ -9,9 +9,12 @@ public class Main {
         printBook(warAndPeace);
         printBook(poltava);
 
-        warAndPeace.setPublishingYear(1867);
 
-        printBook(warAndPeace);
+        if (warAndPeace.equals(poltava)) {
+            System.out.println(warAndPeace.hashCode() + " & " + poltava.hashCode());
+        } else {
+            System.out.println("False");
+        }
     }
 
     private static void printBook(Book book) {
